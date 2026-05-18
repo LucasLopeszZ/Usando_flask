@@ -1,23 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Sistema Flask - Home</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
-    <header>
-        <nav class="container">
-            <div class="logo">Flask<span>App</span></div>
-            <ul>
-                <li><a href="/" class="active">Home</a></li>
-                <li><a href="/sobre">Sobre</a></li>
-                <li><a href="/servico">Serviços</a></li>
-                <li><a href="/contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+{% extends 'base.html' %}
+{% block cabecalho %}
 
     <main class="container">
         <section class="hero">
@@ -44,9 +26,4 @@
             </div>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2026 Projeto Técnico - Desenvolvimento de Sistemas</p>
-    </footer>
-</body>
-</html>
+{% endblock %}

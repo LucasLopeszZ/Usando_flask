@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Sistema Flask - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Flask<span>App</span></div>
+            <ul>
+                <li><a href="{{ url_for('homepage') }}" class="{% if request.endpoint == 'homepage' %}active{% endif %}">Home</a></li>
+                <li><a href="{{ url_for('sobre') }}" class="{% if request.endpoint == 'sobre' %}active{% endif %}">Sobre</a></li>
+                <li><a href="{{ url_for('servico') }}" class="{% if request.endpoint == 'servico' %}active{% endif %}">Serviços</a></li>
+                <li><a href="{{ url_for('contato') }}" class="{% if request.endpoint == 'contato' %}active{% endif %}">Contato</a></li>
+                <li><a href="{{ url_for('cadastro') }}" class="{% if request.endpoint == 'cadastro' %}active{% endif %}">Cadastro</a></li>
+                <li><a href="{{ url_for('listagem') }}" class="{% if request.endpoint == 'listagem' %}active{% endif %}">Listar</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    {%block cabecalho%} {%endblock%}
+
+     <footer>
+        <p>&copy; 2026 Projeto Técnico - Desenvolvimento de Sistemas</p>
+    </footer>
+</body>
+</html>
